@@ -32,11 +32,11 @@ public class LoginCourierTest {
     public void createCourier() {
         Courier courier = new Courier(login, password);
         CourierMethods.createCourier(courier);
+        id = CourierMethods.loginCourier(courier).then().extract().path("id").toString();
         Response response = CourierMethods.loginCourier(courier);
         response.then().assertThat().statusCode(200)
                 .and()
                 .body("id", notNullValue());
-        id = CourierMethods.loginCourier(courier).then().extract().path("id").toString();
     }
 
     @Test
