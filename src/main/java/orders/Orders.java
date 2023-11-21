@@ -24,6 +24,17 @@ public class Orders {
         this.color = color;
     }
 
+    public Orders(String firstName, String lastName, String address, String metroStation, String phone, int rentTime, String deliveryDatev, String comment) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.metroStation = metroStation;
+        this.phone = phone;
+        this.rentTime = rentTime;
+        this.deliveryDatev = deliveryDatev;
+        this.comment = comment;
+    }
+
     public String getFirstName() {
         return firstName;
     }

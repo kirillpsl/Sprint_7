@@ -29,9 +29,11 @@ public class CourierMethods {
     }
 
     @Step("Удаление курьера")
-    public static void delCourier(String courierId) {
-        if (courierId != null)
-            given()
-                    .delete(BASE_URL + COURIER_PATH + "{courierId}", courierId);
+    public static Response delCourier(String courierId) {
+
+        return given()
+                 //   .body("id:" + courierId)
+                .delete(BASE_URL + COURIER_PATH + "{courierId}", courierId);
+
     }
 }
