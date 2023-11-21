@@ -85,6 +85,7 @@ public class LoginCourierTest {
 
     @After
     public void delCourier() {
-        CourierMethods.delCourier(id);
+        if (id != null){
+        CourierMethods.delCourier(id);}
     }
 }
